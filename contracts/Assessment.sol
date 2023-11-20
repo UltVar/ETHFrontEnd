@@ -79,17 +79,17 @@ contract Assessment {
     // custom error
     error CannotBurn(uint256 balance, uint256 burnvalue);
 
-    function withdraw(uint256 _burnvalue) public {
+    function burn(uint256 _burnvalue) public {
         require(msg.sender == owner, "You are not the owner of this account");
         uint _previousBalance = balance;
-        if (balance < __burnvalue) {
+        if (balance < _burnvalue) {
             revert CannotBurn({
                 balance: balance,
                 burnvalue: _burnvalue
             });
         }
 
-        // withdraw the given amount
+        // burn the given amount
         balance -= _burnvalue;
 
         // assert the balance is correct
