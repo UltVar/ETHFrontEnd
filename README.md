@@ -1,7 +1,7 @@
 # ETHFrontEnd
 
 # Description
-This project demonstrates the usage of a Front-end or a webpage using JS and doing transactions using Solidity. The project is made from Gitpod, which uses a virtual VSCode editor. The project consists of 4 types of transactions: Deposit / Withdraw 1 ETH and Mint / Burn 5 ETH. The project was done in order to show the capabilities of Smart Contracts in our front-ends.
+This project demonstrates the usage of a Front-end or a webpage using JS and doing transactions using Solidity. The project is made from Gitpod, which uses a virtual VSCode editor. The project consists of 4 types of transactions: Deposit / Withdraw 1 ETH and Mint / Burn 5 ETH. The project was done in order to show the capabilities of Smart Contracts in our front-ends. This project is from a forked repository that is the starter repository from Metacrafter's Chris. You can check it here: https://github.com/MetacrafterChris/SCM-Starter
 
 # Index.js
 This file is used to run the project's webpage. Here we have the showing of the account's address as well as its balance. There are 4 buttons, namely Deposit / Withdraw 1 ETH and Mint / Burn 5 ETH. Deposit and Withdraw uses 1 ETH to be deposited or withdrawn while Mint and Burn uses 5 ETH to be minted and burned.
