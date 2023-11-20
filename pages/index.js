@@ -67,9 +67,25 @@ export default function HomePage() {
     }
   }
 
+  const mint = async() => {
+    if (atm) {
+      let tx = await atm.mint(5);
+      await tx.wait()
+      getBalance();
+    }
+  }
+
   const withdraw = async() => {
     if (atm) {
       let tx = await atm.withdraw(1);
+      await tx.wait()
+      getBalance();
+    }
+  }
+
+  const burn = async() => {
+    if (atm) {
+      let tx = await atm.burn(5);
       await tx.wait()
       getBalance();
     }
@@ -95,7 +111,9 @@ export default function HomePage() {
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
         <button onClick={deposit}>Deposit 1 ETH</button>
+        <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
+        <button onClick={burn}>Burn 5 ETH</button>
       </div>
     )
   }
