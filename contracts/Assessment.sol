@@ -9,7 +9,7 @@ contract Assessment {
     string public Item1 = "MonkeySaurus NFT";
     string public Item2 = "DDMonkey NFT";
     string public Item3 = "PlaceboMonkey NFT";
-    uint8 public tokenbalance;
+    uint8 public tokenbalance = 0;
 
     event Deposit(uint256 amount);
     event Withdraw(uint256 amount);
