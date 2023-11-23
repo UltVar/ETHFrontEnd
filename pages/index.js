@@ -221,12 +221,11 @@ export default function HomePage() {
       <div>
         <p>NFTs Available: </p>
         <p>MonkeySaurus , DDMonkey, PlaceboMonkey</p>
-        <p>Prices: 1 ETH, 5 ETH, 10 ETH</p>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
-        <p>NFT 1: {nft1}</p>
-        <p>NFT 2: <p id= {nft2}></p></p>
-        <p>NFT 3: <p id= {nft3}></p></p>
+        <p>1 ETH: {nft1}</p>
+        <p>5 ETH: {nft2}</p>
+        <p>10 ETH: {nft3}</p>
         <button onClick={deposit}>Deposit 1 ETH</button>
         <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
