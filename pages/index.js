@@ -83,6 +83,38 @@ export default function HomePage() {
     }
   }
 
+  const NFT1 = async() =>{
+    if (atm){
+      let tx = await atm.nft1(1);
+      await tx.wait()
+      getBalance();
+    }
+  }
+
+  const NFT2 = async() =>{
+    if (atm){
+      let tx = await atm.nft2(1);
+      await tx.wait()
+      getBalance();
+    }
+  }
+
+  const NFT3 = async() =>{
+    if (atm){
+      let tx = await atm.nft3(1);
+      await tx.wait()
+      getBalance();
+    }
+  }
+
+  const tokens = async() =>{
+    if (atm){
+      let tx = await atm.tokens(1);
+      await tx.wait()
+      getBalance();
+    }
+  }
+  
   const burn = async() => {
     if (atm) {
       let tx = await atm.burn(5);
