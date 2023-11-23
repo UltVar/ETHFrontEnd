@@ -93,7 +93,7 @@ export default function HomePage() {
 
   const NFT2 = async() =>{
     if (atm){
-      let tx = await atm.nft2(1);
+      let tx = await atm.nft2(5);
       await tx.wait()
       getBalance();
     }
@@ -101,7 +101,7 @@ export default function HomePage() {
 
   const NFT3 = async() =>{
     if (atm){
-      let tx = await atm.nft3(1);
+      let tx = await atm.nft3(10);
       await tx.wait()
       getBalance();
     }
@@ -114,7 +114,7 @@ export default function HomePage() {
       getBalance();
     }
   }
-  
+
   const burn = async() => {
     if (atm) {
       let tx = await atm.burn(5);
@@ -140,12 +140,20 @@ export default function HomePage() {
 
     return (
       <div>
+        <p>NFTs Available: </p>
+        <p>MonkeySaurus , DDMonkey, PlaceboMonkey</p>
+        <p>Prices: 1 ETH, 5 ETH, 10 ETH</p>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
+        <p>NFT 1: {nft1}</p>
+        <p>NFT 2: {nft2}</p>
+        <p>NFT 3: {nft3}</p>
+        <p>Your MM Tokens: {tokens}</p>
         <button onClick={deposit}>Deposit 1 ETH</button>
         <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
         <button onClick={burn}>Burn 5 ETH</button>
+        <button onClick={nft1}>Buy MonkeySaurus NFT</button>
       </div>
     )
   }
