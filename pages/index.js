@@ -109,7 +109,7 @@ export default function HomePage() {
 
   const tokens = async() =>{
     if (atm){
-      let tx = await atm.tokens(1);
+      let tx = await atm.tokens(10);
       await tx.wait()
       getBalance();
     }
@@ -124,22 +124,22 @@ export default function HomePage() {
   }
 
   function Add2NFT1() {
-    var x = document.getElementById("0").value
+    var x = {NFT1}
     document.getElementById("NFT1").innerHTML = x;
   }
 
   function Add2NFT2() {
-    var x = document.getElementById("1").value
+    var x = {NFT2}
     document.getElementById("NFT2").innerHTML = x;
   }
 
   function Add2NFT3() {
-    var x = document.getElementById("2").value
+    var x = {NFT3}
     document.getElementById("NFT3").innerHTML = x;
   }
 
   function Add2Tokens() {
-    var x = document.getElementById("3").value
+    var x = {tokens}
     document.getElementById("Tokens").innerHTML = x;
   }
 
@@ -159,7 +159,7 @@ export default function HomePage() {
   }
 
   function multclicks4(){
-    Add2tokens();
+    Add2Tokens();
     {tokens};
   }
 
@@ -193,10 +193,10 @@ export default function HomePage() {
         <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
         <button onClick={burn}>Burn 5 ETH</button>
-        <button id = "0" onClick="multclicks1()" value="MonkeySaurus">Buy MonkeySaurus NFT</button>
-        <button id = "1" onClick="multclicks2()" value="DDMonkey">Buy DDMonkey NFT</button>
-        <button id = "2" onClick="multclicks3()" value="PlaceboMonkey">Buy PlaceboMonkey NFT</button>
-        <button id = "3" onClick="multclicks4()" value = {tokens}>Add 10 MM Tokens</button>
+        <button id = "0" onClick={NFT1}>Buy MonkeySaurus NFT</button>
+        <button id = "1" onClick={NFT2}>Buy DDMonkey NFT</button>
+        <button id = "2" onClick={NFT3}>Buy PlaceboMonkey NFT</button>
+        <button id = "3" onClick={tokens}>Add 10 MM Tokens</button>
       </div>
     )
   }
