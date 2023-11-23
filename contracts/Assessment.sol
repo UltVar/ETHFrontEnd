@@ -122,7 +122,7 @@ contract Assessment {
         assert(balance == (_previousBalance - _buyvalue));
     }
 
-    function getNFT1() public view returns(string){
+    function getNFT1() public view returns(string memory){
         returns Item1;
     }
 
@@ -142,7 +142,7 @@ contract Assessment {
 
     }
 
-    function getNFT2() public view returns(string){
+    function getNFT2() public view returns(string memory){
         returns Item2;
     }
 
@@ -162,7 +162,7 @@ contract Assessment {
 
     }
 
-    function nft3() public view returns(string){
+    function nft3() public view returns(string memory){
         returns Item3;
     }
 
