@@ -1,13 +1,13 @@
 # ETHFrontEnd
 
 # Description
-This project demonstrates the usage of a Front-end or a webpage using JS and doing transactions using Solidity. The project is made from Gitpod, which uses a virtual VSCode editor. The project consists of 4 types of transactions: Deposit / Withdraw 1 ETH and Mint / Burn 5 ETH. The project was done in order to show the capabilities of Smart Contracts in our front-ends. This project is from a forked repository that is the starter repository from Metacrafter's Chris. You can check it here: https://github.com/MetacrafterChris/SCM-Starter
+This project demonstrates the usage of a Front-end or a webpage using JS and doing transactions using Solidity. The project is made from Gitpod, which uses a virtual VSCode editor. The project consists of 4 types of transactions: Deposit / Withdraw 1 ETH and Mint / Burn 5 ETH. The project was done in order to show the capabilities of Smart Contracts in our front-ends. This project is from a forked repository that is the starter repository from Metacrafter's Chris. You can check it here: https://github.com/MetacrafterChris/SCM-Starter.
 
 # Index.js
-This file is used to run the project's webpage. Here we have the showing of the account's address as well as its balance. There are 4 buttons, namely Deposit / Withdraw 1 ETH and Mint / Burn 5 ETH. Deposit and Withdraw uses 1 ETH to be deposited or withdrawn while Mint and Burn uses 5 ETH to be minted and burned.
+This file is used to run the project's webpage. Here we have the showing of the account's address as well as its balance. There are 4 buttons, namely Deposit / Withdraw 1 ETH and Mint / Burn 5 ETH. Deposit and Withdraw uses 1 ETH to be deposited or withdrawn while Mint and Burn uses 5 ETH to be minted and burned. It was also used to call and display the NFTs' names and prices, as well as the buttons used to buy them.
 
 # Assessment.sol
-This file contains the functions from Solidity to be used for the webpage. The functions deposit, withdraw, mint, and burn checks if the current connected account is the owner's account. Otherwise, it returns an error indicating that the connected account is not the owner's, which was given during the setup of the front-end. In addition, the functions withdraw and burn, when used on an empty balance, returns an error indicating that the account's balance is insufficient for withdrawing / burning.
+This file contains the functions from Solidity to be used for the webpage. The functions deposit, withdraw, mint, and burn checks if the current connected account is the owner's account. Otherwise, it returns an error indicating that the connected account is not the owner's, which was given during the setup of the front-end. In addition, the functions withdraw and burn, when used on an empty balance, returns an error indicating that the account's balance is insufficient for withdrawing / burning. This also includes the buying of NFTs in the contract as well as displaying variables such as the NFTs' names into the front-end. The variables are within the contract so it is being called from the contract's memory.
 
 # Deploy.js
 This file is used to deploy the network of the project in the localhost.
@@ -26,7 +26,7 @@ After forking the repository, do the following:
 10. You can now do transactions!
 
 For Gitpod users:
-Before connecting your account in Metamask, set up a network using the Ports tab within the window that houses the Terminal. Pick the 8545 link and copy it. That will be used for the network link. This link changes everytime you refresh the project so copy the link everytime.
+Before connecting your account in Metamask, set up a network using the Ports tab within the window that houses the Terminal. Pick the 8545 link and copy it. That will be used for the network link. This link changes everytime you make a new workspace so copy the link everytime before connecting.
 
 # Source Code
 Assessment.sol:
@@ -301,4 +301,4 @@ main().catch((error) => {
 ```
 
 # Video Presentation
-This is a video demo that features the front-end, Assessment.sol, and Index.js: https://www.loom.com/share/450b83222abb4a9c95ae89687164760b?sid=74ec6b59-e5d4-4ecc-b129-71317644b3e8
+This is a video demo that features the front-end and Assessment.sol: https://www.loom.com/share/fc0361ca03e745c6be6412b15f82a80e?sid=77b79d50-8a1b-42c2-935e-578e39bea7b0
