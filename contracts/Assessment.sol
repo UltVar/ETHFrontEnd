@@ -17,7 +17,7 @@ contract Assessment {
     event Burn(uint256 amount);
     event NFT1(string item);
     event NFT2(string item);
-    event NFT2(string item);
+    event NFT3(string item);
     event Tokens(uint8 Tokens);
 
     constructor(uint initBalance) payable {
@@ -110,7 +110,7 @@ contract Assessment {
     function nft1(uint256 _buyvalue) public{
         require(msg.sender == owner, "You are not the owner of this account");
         uint _previousBalance = balance;
-        if (balance < _withdrawAmount) {
+        if (balance < _buyvalue) {
             revert InsufficientBalance({
                 balance: balance,
                 withdrawAmount: _buyvalue
@@ -127,7 +127,7 @@ contract Assessment {
     function nft2(uint256 _buyvalue) public{
         require(msg.sender == owner, "You are not the owner of this account");
         uint _previousBalance = balance;
-        if (balance < _withdrawAmount) {
+        if (balance < _buyvalue) {
             revert InsufficientBalance({
                 balance: balance,
                 withdrawAmount: _buyvalue
@@ -144,7 +144,7 @@ contract Assessment {
     function nft3(uint256 _buyvalue) public{
         require(msg.sender == owner, "You are not the owner of this account");
         uint _previousBalance = balance;
-        if (balance < _withdrawAmount) {
+        if (balance < _buyvalue) {
             revert InsufficientBalance({
                 balance: balance,
                 withdrawAmount: _buyvalue
