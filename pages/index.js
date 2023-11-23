@@ -197,15 +197,15 @@ export default function HomePage() {
     }
 
     if (nft1 == undefined){
-      getNFT1;
+      getNFT1();
     }
 
     if (nft2 == undefined){
-      getNFT2;
+      getNFT2();
     }
 
     if (nft3 == undefined){
-      getNFT3;
+      getNFT3();
     }
 
     return (
