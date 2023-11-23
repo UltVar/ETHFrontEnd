@@ -107,6 +107,7 @@ export default function HomePage() {
   const NFT1 = async() =>{
     if (atm){
       let tx = await atm.nft1(1);
+      await tx.wait()
       getBalance();
     }
   }
