@@ -39,11 +39,18 @@ pragma solidity ^0.8.9;
 contract Assessment {
     address payable public owner;
     uint256 public balance;
+    string public Item1 = "MonkeySaurus NFT";
+    string public Item2 = "DDMonkey NFT";
+    string public Item3 = "PlaceboMonkey NFT";
+    uint8 public tokenbalance = 0;
 
     event Deposit(uint256 amount);
     event Withdraw(uint256 amount);
     event Mint(uint256 amount);
     event Burn(uint256 amount);
+    event NFT1(uint256 amount);
+    event NFT2(uint256 amount);
+    event NFT3(uint256 amount);
 
     constructor(uint initBalance) payable {
         owner = payable(msg.sender);
@@ -130,6 +137,69 @@ contract Assessment {
 
         // emit the event
         emit Burn(_burnvalue);
+    }
+
+    function nft1(uint256 _buyvalue) public{
+        require(msg.sender == owner, "You are not the owner of this account");
+        uint _previousBalance = balance;
+        if (balance < _buyvalue) {
+            revert InsufficientBalance({
+                balance: balance,
+                withdrawAmount: _buyvalue
+            });
+        }
+
+        balance -= _buyvalue;
+
+        assert(balance == (_previousBalance - _buyvalue));
+
+        emit NFT1(_buyvalue);
+    }
+
+    function getNFT1() public view returns(string memory){
+        return Item1;
+    }
+
+    function nft2(uint256 _buyvalue) public{
+        require(msg.sender == owner, "You are not the owner of this account");
+        uint _previousBalance = balance;
+        if (balance < _buyvalue) {
+            revert InsufficientBalance({
+                balance: balance,
+                withdrawAmount: _buyvalue
+            });
+        }
+
+        balance -= _buyvalue;
+
+        assert(balance == (_previousBalance - _buyvalue));
+
+        emit NFT2(_buyvalue);
+    }
+
+    function getNFT2() public view returns(string memory){
+        return Item2;
+    }
+
+    function nft3(uint256 _buyvalue) public{
+        require(msg.sender == owner, "You are not the owner of this account");
+        uint _previousBalance = balance;
+        if (balance < _buyvalue) {
+            revert InsufficientBalance({
+                balance: balance,
+                withdrawAmount: _buyvalue
+            });
+        }
+
+        balance -= _buyvalue;
+
+        assert(balance == (_previousBalance - _buyvalue));
+
+        emit NFT3(_buyvalue);
+    }
+
+    function getNFT3() public view returns(string memory){
+        return Item3;
     }
 }
 ```
