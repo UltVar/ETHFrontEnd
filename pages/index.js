@@ -60,6 +60,12 @@ export default function HomePage() {
     }
   }
 
+  const getNFT1 = async() =>{
+    if (atm) {
+      setNFT1((await atm.getNFT1()));
+    }
+  }
+
   const deposit = async() => {
     if (atm) {
       let tx = await atm.deposit(1);
@@ -86,7 +92,7 @@ export default function HomePage() {
 
   const NFT1 = async() =>{
     if (atm){
-      setNFT1((await atm.nft1(1)))
+      let tx = await atm.nft1(1);
       getBalance();
     }
   }
@@ -124,19 +130,17 @@ export default function HomePage() {
   }
 
   function Add2NFT1() {
-    if (atm){
-      setNFT1((await atm.get))
-      document.getElementById("NFT1").innerHTML = x;
-    }
+    var x = "MonkeySaurus"
+    document.getElementById("NFT1").innerHTML = x;
   }
 
   function Add2NFT2() {
-    var x = {NFT2}
+    var x = "DD Monkey"
     document.getElementById("NFT2").innerHTML = x;
   }
 
   function Add2NFT3() {
-    var x = {NFT3}
+    var x = "Placebo Monkey"
     document.getElementById("NFT3").innerHTML = x;
   }
 

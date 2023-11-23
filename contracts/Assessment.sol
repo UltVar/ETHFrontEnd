@@ -160,7 +160,10 @@ contract Assessment {
 
         assert(balance == (_previousBalance - _buyvalue));
 
-        emit NFT3(Item3);
+    }
+
+    function nft3() public view returns(string){
+        returns Item3;
     }
 
     function tokens(uint8 _tokenvalue) public{
@@ -171,6 +174,6 @@ contract Assessment {
 
         assert(tokenbalance == (_previoustokenBalance + _tokenvalue));
 
-        emit Tokens(tokenbalance);
+        emit Tokens(_tokenvalue);
     }
 }
