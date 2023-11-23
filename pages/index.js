@@ -80,12 +80,6 @@ export default function HomePage() {
     }
   }
 
-  const getTokens = async() =>{
-    if (atm) {
-      setTokens((await atm.getTokens()).toNumber());
-    }
-  }
-
   const deposit = async() => {
     if (atm) {
       let tx = await atm.deposit(1);
