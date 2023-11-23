@@ -7,8 +7,10 @@ export default function HomePage() {
   const [account, setAccount] = useState(undefined);
   const [atm, setATM] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
-  const [nft1, nft2, nft3, setNFT1, setNFT2, setNFT3] = useState(undefined);
+  const [nft1, setNFT1] = useState(undefined);
   const [Tokens, setTokens] = useState(undefined);
+  const [nft2, setNFT2] = useState(undefined);
+  const [nft3, setNFT3] = useState(undefined);
 
   const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   const atmABI = atm_abi.abi;
