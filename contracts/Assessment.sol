@@ -178,6 +178,6 @@ contract Assessment {
     }
 
     function getTokenBalance() public view returns(uint8 memory){
-        return tokenbalance
+        return tokenbalance;
     }
 }
