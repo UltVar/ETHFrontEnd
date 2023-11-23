@@ -144,23 +144,23 @@ export default function HomePage() {
   }
 
   function multclicks1(){
-    Add2NFT1();
     {NFT1};
+    Add2NFT1();
   }
 
   function multclicks2(){
+    {NFT2};
     Add2NFT2();
-    {NFT1};
   }
 
   function multclicks3(){
+    {NFT3};
     Add2NFT3();
-    {NFT2};
   }
 
   function multclicks4(){
-    Add2Tokens();
     {tokens};
+    Add2Tokens();
   }
 
   const initUser = () => {
