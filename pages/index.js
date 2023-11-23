@@ -63,19 +63,19 @@ export default function HomePage() {
 
   const getNFT1 = async() =>{
     if (atm) {
-      setNFT1((await atm.getNFT1()));
+      setNFT1(await atm.getNFT1());
     }
   }
 
   const getNFT2 = async() =>{
     if (atm) {
-      setNFT2((await atm.getNFT2()));
+      setNFT2(await atm.getNFT2());
     }
   }
 
   const getNFT3 = async() =>{
     if (atm) {
-      setNFT3((await atm.getNFT3()));
+      setNFT3(await atm.getNFT3());
     }
   }
 
