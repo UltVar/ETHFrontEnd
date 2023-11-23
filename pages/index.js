@@ -8,7 +8,6 @@ export default function HomePage() {
   const [atm, setATM] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
   const [nft1, setNFT1] = useState(undefined);
-  const [Tokens, setTokens] = useState(undefined);
   const [nft2, setNFT2] = useState(undefined);
   const [nft3, setNFT3] = useState(undefined);
 
@@ -148,46 +147,6 @@ export default function HomePage() {
       await tx.wait()
       getBalance();
     }
-  }
-
-  function Add2NFT1() {
-    var x = {nft1}
-    document.getElementById("NFT1").innerHTML = x;
-  }
-
-  function Add2NFT2() {
-    var x = "DD Monkey"
-    document.getElementById("NFT2").innerHTML = x;
-  }
-
-  function Add2NFT3() {
-    var x = "Placebo Monkey"
-    document.getElementById("NFT3").innerHTML = x;
-  }
-
-  function Add2Tokens() {
-    var x = {tokens}
-    document.getElementById("Tokens").innerHTML = x;
-  }
-
-  function multclicks1(){
-    {NFT1};
-    Add2NFT1();
-  }
-
-  function multclicks2(){
-    {NFT2};
-    Add2NFT2();
-  }
-
-  function multclicks3(){
-    {NFT3};
-    Add2NFT3();
-  }
-
-  function multclicks4(){
-    {tokens};
-    Add2Tokens();
   }
 
   const initUser = () => {
