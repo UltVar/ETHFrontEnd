@@ -7,6 +7,7 @@ export default function HomePage() {
   const [account, setAccount] = useState(undefined);
   const [atm, setATM] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
+  const [setNFT1] = useState(undefined);
 
   const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   const atmABI = atm_abi.abi;
@@ -85,8 +86,7 @@ export default function HomePage() {
 
   const NFT1 = async() =>{
     if (atm){
-      let tx = await atm.nft1(1);
-      await tx.wait()
+      setNFT1((await atm.nft1(1)))
       getBalance();
     }
   }
@@ -124,8 +124,10 @@ export default function HomePage() {
   }
 
   function Add2NFT1() {
-    var x = {NFT1}
-    document.getElementById("NFT1").innerHTML = x;
+    if (atm){
+      setNFT1((await atm.get))
+      document.getElementById("NFT1").innerHTML = x;
+    }
   }
 
   function Add2NFT2() {
@@ -178,6 +180,10 @@ export default function HomePage() {
       getBalance();
     }
 
+    if (nft1 == undefined){
+      NFT1;
+    }
+
     return (
       <div>
         <p>NFTs Available: </p>
@@ -193,7 +199,7 @@ export default function HomePage() {
         <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
         <button onClick={burn}>Burn 5 ETH</button>
-        <button id = "0" onClick={NFT1}>Buy MonkeySaurus NFT</button>
+        <button id = "0" onClick="multclicks1">Buy MonkeySaurus NFT</button>
         <button id = "1" onClick={NFT2}>Buy DDMonkey NFT</button>
         <button id = "2" onClick={NFT3}>Buy PlaceboMonkey NFT</button>
         <button id = "3" onClick={tokens}>Add 10 MM Tokens</button>
