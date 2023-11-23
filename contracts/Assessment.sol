@@ -165,19 +165,4 @@ contract Assessment {
     function getNFT3() public view returns(string memory){
         return Item3;
     }
-
-    function tokens(uint8 _tokenvalue) public{
-        require(msg.sender == owner, "You are not the owner of this account");
-        uint _previoustokenBalance = tokenbalance;
-
-        tokenbalance += _tokenvalue;
-
-        assert(tokenbalance == (_previoustokenBalance + _tokenvalue));
-
-        emit Tokens(_tokenvalue);
-    }
-
-    function getTokenBalance() public view returns(uint8){
-        return tokenbalance;
-    }
 }

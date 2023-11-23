@@ -151,7 +151,7 @@ export default function HomePage() {
   }
 
   function Add2NFT1() {
-    var x = "MonkeySaurus"
+    var x = {nft1}
     document.getElementById("NFT1").innerHTML = x;
   }
 
@@ -224,10 +224,9 @@ export default function HomePage() {
         <p>Prices: 1 ETH, 5 ETH, 10 ETH</p>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
-        <p>NFT 1: <p id= {nft1}></p></p>
+        <p>NFT 1: {nft1}</p>
         <p>NFT 2: <p id= {nft2}></p></p>
         <p>NFT 3: <p id= {nft3}></p></p>
-        <p>Your MM Tokens: <p id= "Tokens"></p></p>
         <button onClick={deposit}>Deposit 1 ETH</button>
         <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
