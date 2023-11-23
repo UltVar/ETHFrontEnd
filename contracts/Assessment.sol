@@ -162,7 +162,7 @@ contract Assessment {
 
     }
 
-    function nft3() public view returns(string memory){
+    function getNFT3() public view returns(string memory){
         return Item3;
     }
 
