@@ -233,7 +233,6 @@ export default function HomePage() {
         <button id = "0" onClick={NFT1}>Buy MonkeySaurus NFT</button>
         <button id = "1" onClick={NFT2}>Buy DDMonkey NFT</button>
         <button id = "2" onClick={NFT3}>Buy PlaceboMonkey NFT</button>
-        <button id = "3" onClick={tokens}>Add 10 MM Tokens</button>
       </div>
     )
   }
