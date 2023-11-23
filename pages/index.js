@@ -7,7 +7,7 @@ export default function HomePage() {
   const [account, setAccount] = useState(undefined);
   const [atm, setATM] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
-  const [setNFT1] = useState(undefined);
+  const [nft1, nft2, nft3, setNFT1, setNFT2, setNFT3] = useState(undefined);
 
   const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   const atmABI = atm_abi.abi;
@@ -63,6 +63,18 @@ export default function HomePage() {
   const getNFT1 = async() =>{
     if (atm) {
       setNFT1((await atm.getNFT1));
+    }
+  }
+
+  const getNFT2 = async() =>{
+    if (atm) {
+      setNFT2((await atm.getNFT2));
+    }
+  }
+
+  const getNFT3 = async() =>{
+    if (atm) {
+      setNFT3((await atm.getNFT3));
     }
   }
 
@@ -185,7 +197,15 @@ export default function HomePage() {
     }
 
     if (nft1 == undefined){
-      NFT1;
+      getNFT1;
+    }
+
+    if (nft2 == undefined){
+      getNFT2;
+    }
+
+    if (nft3 == undefined){
+      getNFT3;
     }
 
     return (
@@ -195,15 +215,15 @@ export default function HomePage() {
         <p>Prices: 1 ETH, 5 ETH, 10 ETH</p>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
-        <p>NFT 1: <p id= "NFT1"></p></p>
-        <p>NFT 2: <p id= "NFT2"></p></p>
-        <p>NFT 3: <p id= "NFT3"></p></p>
+        <p>NFT 1: <p id= {nft1}></p></p>
+        <p>NFT 2: <p id= {nft2}></p></p>
+        <p>NFT 3: <p id= {nft3}></p></p>
         <p>Your MM Tokens: <p id= "Tokens"></p></p>
         <button onClick={deposit}>Deposit 1 ETH</button>
         <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
         <button onClick={burn}>Burn 5 ETH</button>
-        <button id = "0" onClick="multclicks1">Buy MonkeySaurus NFT</button>
+        <button id = "0" onClick={NFT1}>Buy MonkeySaurus NFT</button>
         <button id = "1" onClick={NFT2}>Buy DDMonkey NFT</button>
         <button id = "2" onClick={NFT3}>Buy PlaceboMonkey NFT</button>
         <button id = "3" onClick={tokens}>Add 10 MM Tokens</button>
