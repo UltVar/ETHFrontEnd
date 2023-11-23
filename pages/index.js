@@ -81,7 +81,7 @@ export default function HomePage() {
 
   const getTokens = async() =>{
     if (atm) {
-      setTokens((await atm.getTokens().toNumber));
+      setTokens((await atm.getTokens()).toNumber());
     }
   }
 
