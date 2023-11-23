@@ -21,7 +21,7 @@ export default function HomePage() {
       handleAccount(account);
     }
   }
-
+  
   const handleAccount = (account) => {
     if (account) {
       console.log ("Account connected: ", account);
@@ -123,6 +123,46 @@ export default function HomePage() {
     }
   }
 
+  function Add2NFT1() {
+    var x = document.getElementById("0").value
+    document.getElementById("NFT1").innerHTML = x;
+  }
+
+  function Add2NFT2() {
+    var x = document.getElementById("1").value
+    document.getElementById("NFT2").innerHTML = x;
+  }
+
+  function Add2NFT3() {
+    var x = document.getElementById("2").value
+    document.getElementById("NFT3").innerHTML = x;
+  }
+
+  function Add2Tokens() {
+    var x = document.getElementById("3").value
+    document.getElementById("Tokens").innerHTML = x;
+  }
+
+  function multclicks1(){
+    Add2NFT1();
+    {NFT1};
+  }
+
+  function multclicks2(){
+    Add2NFT2();
+    {NFT1};
+  }
+
+  function multclicks3(){
+    Add2NFT3();
+    {NFT2};
+  }
+
+  function multclicks4(){
+    Add2tokens();
+    {tokens};
+  }
+
   const initUser = () => {
     // Check to see if user has Metamask
     if (!ethWallet) {
@@ -145,15 +185,18 @@ export default function HomePage() {
         <p>Prices: 1 ETH, 5 ETH, 10 ETH</p>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
-        <p>NFT 1: {nft1}</p>
-        <p>NFT 2: {nft2}</p>
-        <p>NFT 3: {nft3}</p>
-        <p>Your MM Tokens: {tokens}</p>
+        <p>NFT 1: <p id= "NFT1"></p></p>
+        <p>NFT 2: <p id= "NFT2"></p></p>
+        <p>NFT 3: <p id= "NFT3"></p></p>
+        <p>Your MM Tokens: <p id= "Tokens"></p></p>
         <button onClick={deposit}>Deposit 1 ETH</button>
         <button onClick={mint}>Mint 5 ETH</button>
         <button onClick={withdraw}>Withdraw 1 ETH</button>
         <button onClick={burn}>Burn 5 ETH</button>
-        <button onClick={nft1}>Buy MonkeySaurus NFT</button>
+        <button id = "0" onClick="multclicks1()" value="MonkeySaurus">Buy MonkeySaurus NFT</button>
+        <button id = "1" onClick="multclicks2()" value="DDMonkey">Buy DDMonkey NFT</button>
+        <button id = "2" onClick="multclicks3()" value="PlaceboMonkey">Buy PlaceboMonkey NFT</button>
+        <button id = "3" onClick="multclicks4()" value = {tokens}>Add 10 MM Tokens</button>
       </div>
     )
   }
