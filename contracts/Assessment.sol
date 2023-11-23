@@ -123,7 +123,7 @@ contract Assessment {
     }
 
     function getNFT1() public view returns(string memory){
-        returns Item1;
+        return Item1;
     }
 
     function nft2(uint256 _buyvalue) public{
@@ -143,7 +143,7 @@ contract Assessment {
     }
 
     function getNFT2() public view returns(string memory){
-        returns Item2;
+        return Item2;
     }
 
     function nft3(uint256 _buyvalue) public{
@@ -163,7 +163,7 @@ contract Assessment {
     }
 
     function nft3() public view returns(string memory){
-        returns Item3;
+        return Item3;
     }
 
     function tokens(uint8 _tokenvalue) public{
