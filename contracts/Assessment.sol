@@ -176,4 +176,8 @@ contract Assessment {
 
         emit Tokens(_tokenvalue);
     }
+
+    function getTokenBalance() public view returns(uint8 memory){
+        return tokenbalance
+    }
 }
