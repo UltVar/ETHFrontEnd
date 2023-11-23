@@ -15,10 +15,9 @@ contract Assessment {
     event Withdraw(uint256 amount);
     event Mint(uint256 amount);
     event Burn(uint256 amount);
-    event NFT1(string item);
-    event NFT2(string item);
-    event NFT3(string item);
-    event Tokens(uint8 Tokens);
+    event NFT1(uint256 amount);
+    event NFT2(uint256 amount);
+    event NFT3(uint256 amount);
 
     constructor(uint initBalance) payable {
         owner = payable(msg.sender);
